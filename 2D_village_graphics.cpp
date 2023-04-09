@@ -11,6 +11,7 @@ int main()
     line(200,100,300,100);
     line(200,100,250,50);
     line(250,50,300,100);
+    
 
     getch();
     closegraph();
