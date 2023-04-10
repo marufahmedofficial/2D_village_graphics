@@ -27,9 +27,6 @@ int main()
     line(565,230,620,300);
     rectangle(525,345,565,430);
 
-
-    
-
     getch();
     closegraph();
     return 0;
