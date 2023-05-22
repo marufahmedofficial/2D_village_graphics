@@ -1,3 +1,4 @@
+
 #include<graphics.h>
 
 int Y=20,l=67,w=25,i=25,j=445,v=14;
@@ -9,12 +10,32 @@ int p=78,q=107,a=185,b= -67,k=-120;
 float x=29, y=-92;
 
 void sky();
+
+void sun();
+
 void clouds();
+
+void mountain();
+
 void house_1();
+
 void house_2();
+
+
+
 void bigTree();
+
+
 void road();
+
+void car();
+
 void school();
+
+
+
+
+
 main()
 
 {
@@ -25,8 +46,13 @@ main()
 
 
 
+   clouds();
+
+  mountain();
 
   sky();
+
+   sun();
 
 
     school();
@@ -39,9 +65,106 @@ main()
 
 
 
+
+   car();
+
     getch();
 
     closegraph();
+
+}
+
+
+
+void clouds()
+
+{
+
+    //clouds 1
+
+    ellipse(40,30,60,240,10,15);
+
+    ellipse(65,20,345,165,20,15);
+
+    ellipse(103,29,340,160,20,15);
+
+    ellipse(109,42,230,50,20,10);
+
+    ellipse(66,46,163,340,31,17);
+
+
+
+    //clouds 3
+
+    ellipse(450,30,60,240,10,15);
+
+    ellipse(475,20,345,165,20,15);
+
+    ellipse(512,27,340,160,20,15);
+
+    ellipse(518,42,230,50,20,10);
+
+    ellipse(476,46,163,340,31,15);
+
+}
+
+
+
+void mountain()
+
+{
+
+    //m1
+
+    setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,GREEN);
+
+    line(0,150,100,75);
+
+    line(100,75,200,150);
+
+    //m2
+
+    setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,GREEN);
+
+    line(175,131,275,75);
+
+    line(275,75,375,150);
+
+    //m3
+
+    setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,GREEN);
+
+    line(350,131,450,75);
+
+    line(450,75,550,150);
+
+    //m4
+
+    setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,GREEN);
+
+    line(525,131,600,75);
+
+    line(600,75,750,180);
+
+    //ground
+
+    line(0,150,750,150);
+
+    floodfill(100,136,WHITE);
+
+    floodfill(275,136,WHITE);
+
+    floodfill(450,136,WHITE);
+
+    floodfill(600,136,WHITE);
 
 }
 
@@ -64,6 +187,20 @@ void sky()
 
 
 
+
+void sun()
+
+{
+
+    setcolor(WHITE);
+
+    setfillstyle(SOLID_FILL,RED);
+
+    arc(524,112,0,173,30);
+
+    floodfill(520,105,WHITE);
+
+}
 
 
 
@@ -484,6 +621,90 @@ void house_2()
 
 
 
+void car()
+
+{
+
+
+
+        setfillstyle(SOLID_FILL, BLACK);
+
+        bar(32+i,j-16,86+i,j);
+
+        bar(40+i,j-10,90+i,j);
+
+        setcolor(LIGHTBLUE);
+
+        setfillstyle(SOLID_FILL, WHITE);
+
+        //body
+
+        line(i,j + 23, i, j);
+
+        line(i, j, 40 + i, j - 20);
+
+        line(40 + i,j - 20, 80 + i, j- 20);
+
+        line(80 + i, j - 20, 100 + i, j);
+
+        line(100 + i, j, 120 + i, j);
+
+        line(120 + i, j, 120 + i, j + 23);
+
+        line(0 + i, j + 23, 18 + i, j + 23);
+
+        arc(30 + i, j+ 23, 0, 180, 12);
+
+        line(42 + i, j + 23, 78 + i, j + 23);
+
+        arc(90 + i, j+ 23, 0, 180, 12);
+
+        line(102 + i, j + 23, 120 + i, j + 23);
+
+        line(28 + i, j, 43 + i, j- 15);
+
+        line(43 + i, j - 15, 57 + i, j - 15);
+
+        line(57 + i, j - 15, 57 + i, j);
+
+        line(57 + i, j, 28 + i, j);
+
+        line(62 + i, j - 15, 77 + i, j - 15);
+
+        line(77 + i, j - 15, 92 + i, j);
+
+        line(92 + i, j, 62 + i, j);
+
+        line(62 + i, j, 62 + i, j - 15);
+
+        floodfill(2 + i, j + 20, LIGHTBLUE);
+
+        setcolor(LIGHTGREEN);
+
+        setfillstyle(SOLID_FILL, 3);
+
+        //Wheels
+
+
+
+        circle(30 + i  ,j + 25, 9);
+
+        circle(90 + i , j + 25, 9);
+
+        floodfill(30 + i, j + 25, LIGHTGREEN);
+
+        floodfill(90 + i, j + 25, LIGHTGREEN);
+
+
+
+}
+
+
+
+
+
+
+
 void school()
 
 {
@@ -596,6 +817,11 @@ void school()
 
     setcolor(5);
 
-    outtextxy(480+k,75+l,"MRF School");
+   // outtextxy(480+k,75+l,"MRF School");
 
 }
+
+
+
+
+
